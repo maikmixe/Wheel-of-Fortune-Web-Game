@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Round</title>
+    <link rel="stylesheet" href="styles/round.css"></link>
+  </head>
+  <body>
+    <div id="menu">
+      <button id="homeBtn" onclick="goHome()">Home</button>
+    </div>
+    
+    <h1>R O U N D</h1>
+    
+    <div id="header">
+      <span>Current Player</span><span id="playerName"></span><br />
+      <span>Round Score</span><span id="roundScore">0</span><br />
+      <span>Total Score</span><span id="totalScore">0</span>
+    </div>
+      
+    <div id="turnPopup"></div>
+
+    <div class="gameDiv">   
+      
+      <div id="spinWheel">
+        <button id="spinButton" onclick="SpinTheWheel()">CLICK TO SPIN</button><br />
+        <span id="spinPoints" style="display: none;"></span><br />
+      </div>
+
+      <span id="puzzleDisplay"></span>
+
+      <span id="guessResult"></span>
+ 
+      <div id="output"></div>
+
+      <div id="controls">
+        <div id="guessControls">
+          <input
+            type="text"
+            id="guessInput"
+            placeholder="Enter a letter"
+            maxlength="1"
+          />
+          <button onclick="doGuess()">Guess Letter</button>
+        </div>
+
+        <div id="solveControls">
+          <input type="text" id="wordInput" placeholder="Solve the puzzle" />
+          <button onclick="doSolve()">Solve Puzzle</button>
+        </div>
+
+        <button id="nextRoundButton" onclick="nextRound()" style="display: none;">Next Round</button>
+      </div>
+    </div>
+
+    <script src="round.js"></script>
+  </body>
+</html>
